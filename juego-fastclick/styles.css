@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+.header {
+  margin: 0;
+  background-color: #333;
+}
+
+body {
+  height: 100vh;
+}
+
+main {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+span,
+.title,
+.support {
+  color: white;
+}
+
+.support {
+  text-decoration: none;
+  align-self: center;
+  position: absolute;
+  right: 300px;
+  background-color: slategray;
+  padding: 0.5em;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: grey;
+  color: aqua;
+  border-radius: 5px;
+  position: absolute;
+  left: 250px;
+}
+
+.slidein {
+  animation-name: crazyButton;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-color: red;
+  color: white;
+}
+
+@keyframes crazyButton {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(300px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.cont--text {
+  font-size: 1.5em;
+}
+
+.cont--number {
+  font-size: 3em;
+}
